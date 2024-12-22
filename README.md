@@ -22,56 +22,56 @@ The application allows users to start a quiz session, answer multiple-choice que
 - Start a New Quiz Session
   - URL: /api/quiz/start
   - Method: POST
-  - Request Body:
-    {
-      "userId": 1
+  - Request Body: <br>
+    { <br>
+      "userId": 1 <br>
     }
-  - Response:
-    {
-      "sessionId": 1,
-      "userId": 1,
-      "startTime": "2024-12-18T12:00:00"
+  - Response: <br>
+    { <br>
+      "sessionId": 1, <br>
+      "userId": 1, <br>
+      "startTime": "2024-12-18T12:00:00" <br>
     }
     
 - Get a Random Question
   - URL: /api/quiz/question/{sessionId}
   - Method: GET
-  - Response:
-    {
-      "questionId": 1,
-      "questionText": "What is 2 + 2?",
-      "options": ["2", "3", "4", "5"]
+  - Response: <br>
+    { <br>
+      "questionId": 1, <br>
+      "questionText": "What is 2 + 2?", <br>
+      "options": ["2", "3", "4", "5"] <br>
     }
     
 - Submit an Answer
   - URL: /api/quiz/submit
   - Method: POST
-  - Request Body:
-    {
-      "sessionId": 1,
-      "questionId": 1,
-      "selectedOption": "4"
+  - Request Body: <br>
+    { <br>
+      "sessionId": 1, <br>
+      "questionId": 1, <br>
+      "selectedOption": "4" <br>
     }
     
-  - Response (if correct):
-    {
-      "correct": true,
-      "message": "Correct answer!"
+  - Response (if correct): <br>
+    { <br>
+      "correct": true, <br>
+      "message": "Correct answer!" <br>
     }
     
-  - Response (if incorrect):
-    {
-      "correct": false,
-      "message": "Incorrect answer!"
+  - Response (if incorrect): <br>
+    { <br>
+      "correct": false, <br>
+      "message": "Incorrect answer!" <br>
     }
 - Get Quiz Statistics
   - URL: /api/quiz/stats/{sessionId}
   - Method: GET
-  - Response:
-    {
-      "totalAnswered": 3,
-      "correctAnswers": 2,
-      "incorrectAnswers": 1
+  - Response: <br>
+    { <br>
+      "totalAnswered": 3, <br>
+      "correctAnswers": 2, <br>
+      "incorrectAnswers": 1 <br>
     }
 
 ## Assumptions
@@ -87,8 +87,8 @@ The application allows users to start a quiz session, answer multiple-choice que
 - Run the application using the QuizAppApplication class.
   
 ## Access the H2 Console:
-URL: http://localhost:8080/h2-console
-JDBC URL: jdbc:h2:mem:testdb
-Username: enter username
-Password: enter password
-Use Postman or any REST client to test the APIs.
+- URL: http://localhost:8080/h2-console
+- JDBC URL: jdbc:h2:mem:testdb
+- Username: enter username
+- Password: enter password
+- Use Postman or any REST client to test the APIs.
